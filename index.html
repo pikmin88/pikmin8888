@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Superfighters</title>
+</head>
+<body style="background-color: black; text-align: center; color: white;">
+  <h1>Superfighters</h1>
+
+  <!-- Load Ruffle -->
+  <script src="ruffle/ruffle.js"></script>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("DOMContentLoaded", () => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      document.getElementById("game").appendChild(player);
+      player.load("superfighters.swf");
+    });
+  </script>
+
+  <!-- Game Container -->
+  <div id="game"></div>
+</body>
+</html>
